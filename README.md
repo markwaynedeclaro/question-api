@@ -23,8 +23,16 @@ It uses Java 21, Spring Boot 3.4.1, and integrates with [any other tools you're 
    
 5. Access http://localhost/v1/questions?amount=50&category=General%20Knowledge to test
 ####
+
 6. Open http://localhost/swagger-ui/index.html to view the swagger page
 ####   
+
+7. Actuator Pages are :
+   * http://localhost/actuator/health
+   * http://localhost/actuator/info
+   * http://localhost/actuator/metrics
+####
+
 
 
 
