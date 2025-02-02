@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +14,6 @@ import java.util.List;
 import java.util.Objects;
 
 @RestController
-@Tag(name = "02 - Parameters", description = "Trivia Question - Parameter Endpoints")
 @RequestMapping("/${api.version}/parameters")
 public class ParameterController {
 
@@ -26,6 +24,7 @@ public class ParameterController {
     }
 
     @Operation(
+            tags = "02 - Parameters",
             summary = "Fetch all Trivia Categories",
             description = "fetches all trivia question api categories from https://opentdb.com/")
     @ApiResponses(value = {
@@ -42,6 +41,7 @@ public class ParameterController {
     }
 
     @Operation(
+            tags = "02 - Parameters",
             summary = "Fetch all Trivia Difficulty levels",
             description = "fetches all trivia question api difficulty levels from https://opentdb.com/")
     @ApiResponses(value = {

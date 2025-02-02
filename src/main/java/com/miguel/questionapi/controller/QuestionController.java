@@ -6,7 +6,6 @@ import com.miguel.questionapi.service.QuestionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +16,6 @@ import java.util.List;
 import static com.miguel.questionapi.utility.Constants.MULTIPLE;
 
 @RestController
-@Tag(name = "03 - Questions", description = "Trivia Question Endpoints")
 @RequestMapping("/${api.version}/questions")
 public class QuestionController {
 
@@ -28,6 +26,7 @@ public class QuestionController {
     }
 
     @Operation(
+            tags = "03 - Questions",
             summary = "Fetch all Trivia Questions",
             description = "fetches all trivia question api entities from https://opentdb.com/")
     @ApiResponses(value = {
