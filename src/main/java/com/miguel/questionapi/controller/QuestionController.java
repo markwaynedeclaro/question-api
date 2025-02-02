@@ -16,9 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import static com.miguel.questionapi.utility.Constants.MULTIPLE;
 
-
-@Tag(name = "Questions", description = "Trivia Question Api")
 @RestController
+@Tag(name = "03 - Questions", description = "Trivia Question Endpoints")
 @RequestMapping("/${api.version}/questions")
 public class QuestionController {
 
