@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Objects;
 
 @RestController
-@Tag(name = "02 - Parameters", description = "Trivia Question - Parameter Endpoints")
 @RequestMapping("/${api.version}/parameters")
 public class ParameterController {
 
@@ -26,6 +25,7 @@ public class ParameterController {
     }
 
     @Operation(
+            tags = "02 - Parameters",
             summary = "Fetch all Trivia Categories",
             description = "fetches all trivia question api categories from https://opentdb.com/")
     @ApiResponses(value = {
@@ -42,6 +42,7 @@ public class ParameterController {
     }
 
     @Operation(
+            tags = "02 - Parameters",
             summary = "Fetch all Trivia Difficulty levels",
             description = "fetches all trivia question api difficulty levels from https://opentdb.com/")
     @ApiResponses(value = {

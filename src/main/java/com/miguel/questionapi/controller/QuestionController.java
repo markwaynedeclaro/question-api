@@ -17,7 +17,6 @@ import java.util.List;
 import static com.miguel.questionapi.utility.Constants.MULTIPLE;
 
 @RestController
-@Tag(name = "03 - Questions", description = "Trivia Question Endpoints")
 @RequestMapping("/${api.version}/questions")
 public class QuestionController {
 
@@ -28,6 +27,7 @@ public class QuestionController {
     }
 
     @Operation(
+            tags = "03 - Questions",
             summary = "Fetch all Trivia Questions",
             description = "fetches all trivia question api entities from https://opentdb.com/")
     @ApiResponses(value = {

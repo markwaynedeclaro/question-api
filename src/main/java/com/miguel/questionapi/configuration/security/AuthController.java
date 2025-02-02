@@ -1,6 +1,7 @@
 package com.miguel.questionapi.configuration.security;
 
 import com.miguel.questionapi.configuration.security.JwtTokenProvider;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@Tag(name = "01 - Authentication", description = "Authentication Endpoints")
 @RequestMapping("/api/auth")
 public class AuthController {
 
@@ -22,6 +22,7 @@ public class AuthController {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
 
+    @Operation(tags = "01 - Authentication")
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
