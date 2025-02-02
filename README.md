@@ -13,21 +13,29 @@ It uses Java 21, Spring Boot 3.4.1, and integrates with [any other tools you're 
 
 2. Make sure you have installed/run docker on your machine.
 ####
-3. Build the docker image:
+
+3. Remove any running containers and existing question api images
+   ```bash
+   docker rm -f question-api-container
+   docker container prune
+   y
+   docker rmi question-api
+
+4. Build the docker image:
    ```bash
    docker build -t question-api .
 
-4. Run the docker container:
+5. Run the docker container:
    ```bash
    docker run -d --name question-api-container -p 80:80 question-api 
    
-5. Access http://localhost/v1/questions?amount=50&category=General%20Knowledge to test
+6. Access http://localhost/v1/questions?amount=50&category=General%20Knowledge to test
 ####
 
-6. Open http://localhost/swagger-ui/index.html to view the swagger page
+7. Open http://localhost/swagger-ui/index.html to view the swagger page
 ####   
 
-7. Actuator Pages are :
+8. Actuator Pages are :
    * http://localhost/actuator/health
    * http://localhost/actuator/info
    * http://localhost/actuator/metrics
