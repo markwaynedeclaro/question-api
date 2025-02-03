@@ -30,7 +30,6 @@ public class ParameterController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation")
     })
-    @SecurityRequirement(name = "bearerAuth")
     @GetMapping(value="/categories", produces = "application/json")
     public ResponseEntity<List<String>> getAllCategories() {
         List<String> categoryList = parameterService.getAllCategories();
@@ -47,7 +46,6 @@ public class ParameterController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation")
     })
-    @SecurityRequirement(name = "bearerAuth")
     @GetMapping(value = "/difficulty-levels", produces = "application/json")
     public ResponseEntity<List<String>> getAllDifficultyLevels() {
         List<String> dificultyLevelList = parameterService.getAllDifficultyLevels();

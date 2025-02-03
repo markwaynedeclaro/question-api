@@ -20,8 +20,17 @@ COPY . /app/
 # Step 6: Verify Gradle installation
 RUN gradle --version
 
+# Run Gradle wrapper on its own to cache the gradle installation
+COPY ./gradlew gradlew
+COPY ./gradle/ gradle/
+RUN ./gradlew
+
+# Run the actual gradle
+COPY . .
+RUN ./gradlew build
+
 # Step 7: Build the application
-RUN gradle build --no-daemon
+#RUN gradle build --no-daemon
 
 # Step 8: Use a lightweight JDK 21 image to run the app
 FROM openjdk:21-jdk-slim
