@@ -49,7 +49,6 @@ public class QuestionService {
     }
 
 
-    @Async
     private <T> T executeRequest(Request request, TypeReference<T> typeReference) throws ApiNewCallException {
         try (Response response = client.newCall(request).execute()) {
             if (response.isSuccessful() && response.body() != null) {
