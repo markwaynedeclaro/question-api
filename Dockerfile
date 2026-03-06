@@ -32,8 +32,8 @@ RUN ./gradlew build
 # Step 7: Build the application
 #RUN gradle build --no-daemon
 
-# Step 8: Use a lightweight JDK 21 image to run the app
-FROM openjdk:21-jdk-slim
+# Step 8: Use a Amazon Corretto (AWS Optimized) image to run the app
+FROM amazoncorretto:21-al2023
 
 # Step 9: Set the working directory in the container
 WORKDIR /app
