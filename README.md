@@ -30,12 +30,25 @@ It uses Java 21, Spring Boot 3.4.1, and integrates with [any other tools you're 
    docker run -d --name question-api-container -p 80:80 question-api
 
 ##
+## To check images and containers
+- images
+   ```bash
+  docker images
+
+- containers
+   ```bash
+  docker ps --all
+
+##
 ## NOTES
 * secret key (in application.properties) is generated from PasswordEncoderUtil
 #####
 * http://localhost/v1/questions?amount=50&category=General%20Knowledge will call
 https://opentdb.com/api.php?amount=50&category=12&type=multiple
 
+##
+## API Docs
+http://localhost/api-docs
 
 ##
 ## Swagger Page
