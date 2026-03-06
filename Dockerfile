@@ -1,5 +1,5 @@
 # Step 1: Use an image with Gradle and OpenJDK 21 pre-installed
-FROM openjdk:21-jdk-slim as build
+FROM amazoncorretto:21-al2023 AS build
 
 # Step 2: Set environment variables
 ENV GRADLE_VERSION=8.11.1
