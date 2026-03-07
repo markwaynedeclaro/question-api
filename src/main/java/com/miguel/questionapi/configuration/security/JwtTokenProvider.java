@@ -31,9 +31,6 @@ public class JwtTokenProvider {
 
     // Generate a secure key from the secret
     private Key getSigningKey() {
-        //byte[] keyBytes = Decoders.BASE64.decode(jwtSecret);
-        //return Keys.hmacShaKeyFor(keyBytes);
-
         byte[] keyBytes = Base64.getDecoder().decode(jwtSecret);
         return Keys.hmacShaKeyFor(keyBytes);
     }
